@@ -1,0 +1,7 @@
+<div class="container" style="margin-top: 30px">
+ <h1 class="text-center mb-5" style="background: #3F51B5; color:aliceblue">All Driver's Location</h1>
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]='8' style="margin-top: 20px" >
+    <agm-marker *ngFor="let loc of location" [latitude] = "loc.lat" [longitude]="loc.long">
+    </agm-marker>
+  </agm-map>
+</div>

@@ -1,0 +1,77 @@
+<div class="container-fluid">
+  <div class="row request">
+    <!-- <div class="col-md-4">
+      <h1>Request a Vehicle for your Cargo</h1>
+      <div class="text-center mt-3">
+        <button class="btn btn-create" [routerLink]="['/requests']" routerLinkActive="router-link-active" >Show my requests</button>
+      </div>
+    </div> -->
+    <div class="col-md-8 offset-md-2">
+      <div class='head'>
+        <h5>Request a Vehicle for your Cargo</h5>
+        <div class="text-center mt-3">
+          <button class="btn btn-create" [routerLink]="['/requests']" routerLinkActive="router-link-active" >Show my requests</button>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <button class="btn btn-create" [routerLink]="['']" routerLinkActive="router-link-active" >Go back</button>
+      </div>
+      <form [formGroup] = "requestForm" (ngSubmit)='makeRequest(requestForm.value)'>
+        <div class="uk-margin mt-0">
+          <label style="color:aliceblue" class="uk-form-label" for="form-stacked-text" style="color: #331832">Name</label>
+          <input class="uk-input border" type="text" placeholder="" style="color: #331832" formControlName="name">
+        </div>
+        <div class="uk-margin mt-0">
+          <label style="color:aliceblue" class="uk-form-label" for="form-stacked-text" style="color: #331832">PhoneNumber</label>
+          <input class="uk-input border" type="number" placeholder="" style="color: #331832" formControlName="phoneNumber">
+        </div>
+        <div class="uk-margin mt-0">
+          <label style="color:aliceblue" class="uk-form-label" for="form-stacked-text" style="color: #331832">Address</label>
+          <input class="uk-input border" type="text" placeholder="" style="color: #331832" formControlName="address">
+        </div>
+        <div class="uk-margin mt-0">
+          <label style="color:aliceblue" class="uk-form-label" for="form-stacked-text" style="color: #331832">Destination</label>
+          <input class="uk-input border" type="text" placeholder="" style="color: #331832" formControlName="destination">
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="uk-margin">
+              <label class="uk-form-label" for="form-stacked-text" style="color: #331832">Load Weight</label>
+              <div class="uk-form-controls" style="margin-left: 0px">
+                <select class="uk-select border customerId" id="form-stacked-select" style="border:2.5px solid #052152; color: #331832; font-size: 0.8rem;" formControlName="weight">
+                  <option>--Select--</option>
+                  <option *ngFor="let weight of weights">{{weight}}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="uk-margin mt-0">
+              <label style="color:aliceblue" class="uk-form-label" for="form-stacked-text" style="color: #331832">Length(ft)</label>
+              <input class="uk-input border" type="number" placeholder="" style="color: #331832" formControlName="lengt">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="uk-margin mt-0">
+              <label style="color:aliceblue" class="uk-form-label" for="form-stacked-text" style="color: #331832">Breadth(ft)</label>
+              <input class="uk-input border" type="numer" placeholder="" style="color: #331832" formControlName="breadth">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="uk-margin mt-0">
+              <label style="color:aliceblue" class="uk-form-label" for="form-stacked-text" style="color: #331832">Height(ft)</label>
+              <input class="uk-input border" type="number" placeholder="" style="color: #331832" formControlName="height">
+            </div>
+          </div>
+        </div>
+        <div class="uk-margin mt-0">
+          <label style="color:aliceblue" class="uk-form-label" for="form-stacked-text" style="color: #331832">Load Content</label>
+          <input class="uk-input border" type="text" placeholder="" style="color: #331832" formControlName="content">
+        </div>
+        <div class="text-center mt-3">
+          <button class="btn btn-create" [disabled]="requestForm.invalid" type="submit">Submit Request</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

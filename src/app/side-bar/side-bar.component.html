@@ -1,0 +1,50 @@
+<div id="main-sidebar" class="column">
+    <div class="sidebar-content">
+      <div class="profile">
+        <div class="picture">
+          <!-- <img [src]="user?.Photo | safeHtml" /> -->
+        </div>
+      </div>
+
+      <div class="menu-items">
+        <div class="menu">
+          <a routerLink="" routerLinkActive="router-link-active">
+            <p><span uk-icon="icon: location;"></span>Overview</p>
+          </a>
+        </div>
+        <div class="menu">
+          <a routerLink="clientOrders" routerLinkActive="router-link-active">
+            <p><span uk-icon="icon: file-text;"></span>Orders</p>
+          </a>
+        </div>
+        <div class="menu">
+          <a routerLink="team-details" routerLinkActive="router-link-active">
+            <p><span uk-icon="icon: users;"></span>Comms</p>
+          </a>
+        </div>
+        <div class="menu">
+          <a routerLink="team-details" routerLinkActive="router-link-active">
+            <p><span uk-icon="icon: users;"></span>Alerts</p>
+          </a>
+        </div>
+        <div class="menu">
+          <a routerLink="track" routerLinkActive="router-link-active">
+            <p><span uk-icon="icon: home;"></span>Track</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div id="main-sidebar" class="column" *ngIf="!isAuthorized">
+    <div class="sidebar-content">
+
+      <div class="menu-items" style="margin-top: 200px;">
+        <img src="./assets/Images/lock.svg" alt="">
+      </div>
+
+      <div class="media">
+        <img src="./assets/Images/square group.png" alt="squares" />
+      </div>
+    </div>
+  </div> -->

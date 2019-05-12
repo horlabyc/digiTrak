@@ -1,0 +1,35 @@
+<div class="container mt-5">
+  <h1 class="text-center" style="background: #3F51B5; color:aliceblue">All Client's Requests</h1>
+  <div class="table">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Pick Up</th>
+          <th scope="col">Destination</th>
+          <th scope="col">Volume</th>
+          <th scope="col">Weight</th>
+          <th scope="col">Content</th>
+          <th scope="col">Status</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <th scope="row">{{order.id}}</th>
+          <td>{{order.name}}</td>
+          <td>{{order.phoneNumber}}</td>
+          <td>{{order.address}}</td>
+          <td>{{order.destination}}</td>
+          <td>{{order.volume}}</td>
+          <td>{{order.weight}}</td>
+          <td>{{order.content}}</td>
+          <td>{{order.status}}</td>
+          <td><span class="uk-badge" (click)="assignTask(order)" style="cursor: pointer">Assign</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
