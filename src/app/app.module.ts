@@ -27,6 +27,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { ClientRequestComponent } from './client-request/client-request.component';
 import { HttpClientModule } from '@angular/common/http';
+import { environment } from '../environments/environment';
 
 const config = {
   apiKey: 'AIzaSyCg0ai0qVhkeB58lCW2Z-ipD4NxckxlmYA',
@@ -69,7 +70,7 @@ const config = {
     MDBBootstrapModule.forRoot(),
     ToastrModule.forRoot(),
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBT5U7Y1X6q0Em5QIsgO33IF8PUb8PQV8E'
+      apiKey: environment.apiKey
     }),
     AppRoutingModule
   ],
